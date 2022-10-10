@@ -1,140 +1,61 @@
-import "./header.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBed, faCalendarDays, faCar, faPerson, faPlane, faTaxi } from "@fortawesome/free-solid-svg-icons"
-import { DateRange } from 'react-date-range'
-import { useState } from "react"
-import 'react-date-range/dist/styles.css'
-import 'react-date-range/dist/theme/default.css'
-import { format } from "date-fns";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
+import './header.css'
 
-const Header = ({ type }) => {
-    const [dateDrawer, setDateDrawer] = useState(false);
-    const [destination, setDestination] = useState("");
-    const [date, setDate] = useState([
-        {
-            startDate: new Date(),
-            endDate: new Date(),
-            key: 'selection'
-        }
-    ]);
-    const [openOptions, setOpenOptions] = useState(false);
-    const [options, setOptions] = useState({
-        adult: 1,
-        children: 0,
-        room: 1,
-    });
+const Header = () => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const handleSearch = () => {
-        navigate("/hotels", { state: { destination, date, options } })
+    const handleList = () => {
+        navigate("/list")
     }
 
-    const handleOption = (name, operation) => {
-        setOptions(prev => {
-            return {
-                ...prev,
-                [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
-            };
-        });
-    };
-
     return (
-        <div className="header">
-            <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
-                <div className="headerList">
-                    <div className="headerListItem first">
-                        <FontAwesomeIcon icon={faBed} />
-                        <span>Stays</span>
-                    </div>
-                    <div className="headerListItem">
-                        <FontAwesomeIcon icon={faPlane} />
-                        <span>Flights</span>
-                    </div>
-                    <div className="headerListItem">
-                        <FontAwesomeIcon icon={faCar} />
-                        <span>Car rentals</span>
-                    </div>
-                    <div className="headerListItem">
-                        <FontAwesomeIcon icon={faBed} />
-                        <span>Attractions</span>
-                    </div>
-                    <div className="headerListItem">
-                        <FontAwesomeIcon icon={faTaxi} />
-                        <span>Airport taxis</span>
-                    </div>
+        <div class="header">
+            <div class="image">
+                <img src={require('../../images/h1.jpg')} alt="" class="slide" />
+            </div>
+            <div class="headContainer">
+
+                <div class="text">
+                    <h1>Welcome to Britannia Hotel</h1>
+                    <p>Britannia Hotel Sylhet is located in Sylhet and features a terrace. Among the facilities of this property
+                        are a restaurant, a 24-hour front desk and room service, along with free WiFi throughout the property. Free
+                        private parking is available and the hotel also has car rental for guests who want to explore the
+                        surrounding area.</p>
+                    <button>MORE INFO</button>
                 </div>
-                {type !== "list" &&
-                    <>
-                        <h1 className="headerTitle">
-                            A Lifetime of discounts? It's Genius.
-                        </h1>
-                        <p className="headerDesc">
-                            Get rewarded for your travels - unlock instant savings of 10% or more with a free Hotels.com account.
-                        </p>
-                        <button className="headerBtn">Sign in / Register</button>
 
-                        <div className="headerSearch">
-                            <div className="headerSearchItem">
-                                <FontAwesomeIcon icon={faBed} className="headerIcon" />
-                                <input type="text" placeholder="Where are you going" className="headerSearchInput" onChange={e => setDestination(e.target.value)}
-                                />
-                            </div>
-                            <div className="headerSearchItem">
-                                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-                                <span onClick={() => setDateDrawer(!dateDrawer)} className="headerSearchText">{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`} </span>
-                                {dateDrawer && <DateRange
-                                    editableDateInputs={true}
-                                    onChange={item => setDate([item.selection])}
-                                    moveRangeOnFirstSelection={false}
-                                    ranges={date}
-                                    className="date"
-                                    minDate={new Date()}
-                                />}
-                            </div>
-                            <div className="headerSearchItem">
-                                <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-                                <span
-                                    onClick={() => setOpenOptions(!openOptions)}
-                                    className="headerSearchText">
-                                    {`${options.adult} adult - ${options.children} children - ${options.room} room`}
-                                </span>
 
-                                {openOptions && <div className="options">
-                                    <div className="optionItem">
-                                        <span className="optionText">Adult</span>
-                                        <div className="optionContainer">
-                                            <button disabled={options.adult <= 1} className="optionCounterBtn" onClick={() => handleOption("adult", "d")}>-</button>
-                                            <span className="optionCounterNumber">{options.adult}</span>
-                                            <button className="optionCounterBtn" onClick={() => handleOption("adult", "i")}>+</button>
-                                        </div>
-                                    </div>
+                <div class="imageItem">
+                    <img src={require('../../images/h1.jpg')} alt="" class="slide active" onclick="img('../../images/h1.jpg')" />
+                    <img src={require('../../images/h5.jpg')} alt="" class="slide" onclick="img('../../images/h5.jpg')" />
+                    <img src={require('../../images/home11.jpg')} alt="" class="slide" onclick="img('../../images/home11.jpg')" />
+                    <img src={require('../../images/home14.jpg')} alt=""
+                        class="slide" onclick="img('../../images/home14.jpg')" />
+                </div>
+            </div>
 
-                                    <div className="optionItem">
-                                        <span className="optionText">Children</span>
-                                        <div className="optionContainer">
-                                            <button disabled={options.children <= 0} className="optionCounterBtn" onClick={() => handleOption("children", "d")}>-</button>
-                                            <span className="optionCounterNumber">{options.children}</span>
-                                            <button className="optionCounterBtn" onClick={() => handleOption("children", "i")}>+</button>
-                                        </div>
-                                    </div>
+            <div className="headerSearch">
+                <div className="headerContainer">
+                    <div className="box">
+                        <label htmlFor="">Check-in:</label>
+                        <input type="date" placeholder='Check-in-Date' />
+                    </div>
+                    <div className="box">
+                        <label htmlFor="">Check-out:</label>
+                        <input type="date" placeholder='Check-out-Date' />
+                    </div>
+                    <div className="box">
+                        <label htmlFor="">Adult:</label>
+                        <input type="number" placeholder="0" />
+                    </div>
+                    <div className="box">
+                        <label htmlFor="">Children:</label>
+                        <input type="number" placeholder="0" />
+                    </div>
 
-                                    <div className="optionItem">
-                                        <span className="optionText">Room</span>
-                                        <div className="optionContainer">
-                                            <button disabled={options.room <= 1} className="optionCounterBtn" onClick={() => handleOption("room", "d")}>-</button>
-                                            <span className="optionCounterNumber">{options.room}</span>
-                                            <button className="optionCounterBtn" onClick={() => handleOption("room", "i")}>+</button>
-                                        </div>
-                                    </div>
-                                </div>}
-                            </div>
-                            <div className="headerSearchItem">
-                                <button className="headerBtn" onClick={handleSearch}>Search</button>
-                            </div>
-                        </div>
-                    </>}
+                </div>
+                <button className="search" onClick={handleList}>Search</button>
             </div>
         </div>
     )

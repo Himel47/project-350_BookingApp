@@ -1,0 +1,49 @@
+.rooms {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+
+.roomContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+
+.view>button {
+    position: relative;
+    border: none;
+    padding: 15px 30px;
+    background-color: coral;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.roomContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.roomContent .box {
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+    padding: 15px;
+}
+
+.listImg {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}

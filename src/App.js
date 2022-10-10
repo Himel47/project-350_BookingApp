@@ -1,20 +1,17 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutPage from "./pages/aboutPage/AboutPage";
 import Home from "./pages/home/Home";
-import Hotel from "./pages/hotel/Hotel";
-import List from "./pages/list/List";
-
+import RoomPage from "./pages/roomPage/RoomPage";
+import SearchPage from "./pages/searchPage/SearchPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/hotels" element={<List />} />
-        <Route path="/hotels/:id" element={<Hotel />} />
+        <Route path="/room" element={<RoomPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/list" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

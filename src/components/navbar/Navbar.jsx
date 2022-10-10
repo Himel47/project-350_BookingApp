@@ -1,15 +1,18 @@
-import "./navbar.css";
+import './navbar.css'
 
 const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navContainer">
                 <span className="logo">
-                    Hotels.com
+                    <img alt="logo" src={require('../../images/Britannia-Hotel.jpg')} />
                 </span>
-                <div className="navItems">
-                    <button className="navButton">Register</button>
-                    <button className="navButton">Login</button>
+                <div className="nav-menu">
+                    <a href="#" className="navLink">Home</a>
+                    <a href="#about" className="navLink">About</a>
+                    <a href="#rooms" className="navLink">Rooms</a>
+                    <a href="#gallery" className="navLink">Gallery</a>
+                    <a href="#contact" className="navLink">Contact</a>
                 </div>
             </div>
         </div>

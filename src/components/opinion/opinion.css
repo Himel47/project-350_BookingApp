@@ -1,0 +1,38 @@
+.sayings {
+    width: 100%;
+    max-width: 1024px;
+    background-image: url("https://i.pinimg.com/originals/91/c1/9b/91c19b12f56b4af9356c2e967f7dc6be.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 60px;
+}
+
+.sContainer {
+    background: cornflowerblue;
+    padding: 30px;
+    width: 33%;
+    height: 470px;
+    position: absolute;
+    top: -16%;
+    right: 55%;
+    color: white;
+    border-radius: 3px;
+}
+
+.sContainer .text {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 25px;
+    margin-top: 25px;
+}
+
+.opinion {
+    margin-left: 15%;
+}
+
+.opinion>span {
+    margin: 10px;
+
+}

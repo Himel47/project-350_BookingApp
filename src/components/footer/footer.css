@@ -1,23 +1,92 @@
 .footer {
-    width: 100%;
-    width: 1024px;
-    font-size: 12px;
-}
-
-.fLists {
-    width: 100%;
+    margin-top: 100px;
+    width: 1500px;
+    background-color: coral;
+    color: white;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
 }
 
-.fList {
-    list-style: none;
-    padding: 0;
+.mail {
+    max-width: 1024px;
+    align-items: center;
+    justify-content: center;
 }
 
-.fListItem {
-    margin-bottom: 10px;
-    color: #003580;
+.mailTitle {
+    margin-left: 16px;
+}
+
+.mailDesc {
+    margin: 20px 0 20px 35px;
+}
+
+.mailInputContainer {
+    margin-top: 30px;
+}
+
+.mailInputContainer>input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+}
+
+.mailInputContainer>button {
+    height: 50px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+.contactInfo {
+    margin-top: 50px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 20px;
+    width: 1500px;
+}
+
+.contactInfo>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info {
+    align-items: flex-end;
+    cursor: pointer;
+    margin-left: 120px;
+}
+
+.info>h4:hover {
+    color: cornflowerblue;
+}
+
+.condition:hover {
+    color: cornflowerblue;
+}
+
+.contactTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.conItem>span {
+    margin-left: 15px;
+}
+
+.fText {
+    margin-top: 15px;
 }

@@ -1,0 +1,20 @@
+.gallery {
+    margin-top: 150px;
+    width: 100%;
+    max-width: 1024px;
+    margin-bottom: 30px;
+}
+
+.gContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.heading>button {
+    margin-top: 30px;
+}
+
+.right .img {
+    margin-left: 80px;
+}
