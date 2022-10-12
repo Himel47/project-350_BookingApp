@@ -1,6 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import './about.css'
 
 const About = () => {
+
+    const navigate = useNavigate();
+    const handleAbout = () => {
+        navigate("/about");
+    }
     return (
         <div className="about" id='about'>
             <div className="abContainer">
@@ -21,7 +27,7 @@ const About = () => {
                             Hotel Sylhet has been welcoming Booking.com guests since Mar 6, 2020.<br />
                             Distance in property description is calculated using © OpenStreetMap
                         </p>
-                        <button class="btn1">READ MORE</button>
+                        <button class="btn1" onClick={handleAbout}>READ MORE</button>
                     </div>
                 </div>
             </div>

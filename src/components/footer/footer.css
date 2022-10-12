@@ -58,6 +58,7 @@
     gap: 80px;
     padding: 20px;
     width: 1500px;
+    height: 200px;
 }
 
 .contactInfo>div {
@@ -90,5 +91,5 @@
 }
 
 .fText {
-    margin-top: 15px;
+    margin: 15px 0 -15px 0;
 }

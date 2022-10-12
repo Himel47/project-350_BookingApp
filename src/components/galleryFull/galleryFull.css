@@ -14,7 +14,7 @@
 .hotelImages {
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
 
@@ -45,8 +45,8 @@
 }
 
 .sliderImg {
-    width: 70%;
-    height: 90vh;
+    width: 80%;
+    height: 80vh;
 }
 
 .close {

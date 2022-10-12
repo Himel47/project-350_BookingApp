@@ -1,9 +1,9 @@
-import './roomPage.css'
+import React from 'react'
 
 const RoomPage = () => {
     return (
         <div>
-            All rooms
+            Room Page
         </div>
     )
 }

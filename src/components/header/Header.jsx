@@ -19,7 +19,7 @@ const Header = () => {
                 <div class="text">
                     <h1>Welcome to Britannia Hotel</h1>
                     <p>Britannia Hotel Sylhet is located in Sylhet and features a terrace. Among the facilities of this property
-                        are a restaurant, a 24-hour front desk and room service, along with free WiFi throughout the property. Free
+                        are a restaurant, a 24-hour front desk and room service, along with free WiFi throughout the property.<br /> Free
                         private parking is available and the hotel also has car rental for guests who want to explore the
                         surrounding area.</p>
                     <button>MORE INFO</button>
