@@ -47,11 +47,11 @@ const Header = () => {
                     </div>
                     <div className="box">
                         <label htmlFor="">Adult:</label>
-                        <input type="number" placeholder="0" />
+                        <input type="number" min={1} placeholder="1" />
                     </div>
                     <div className="box">
                         <label htmlFor="">Children:</label>
-                        <input type="number" placeholder="0" />
+                        <input type="number" min={0} placeholder="0" />
                     </div>
 
                 </div>

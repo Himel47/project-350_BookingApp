@@ -14,6 +14,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/list" element={<SearchPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/searchlist" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

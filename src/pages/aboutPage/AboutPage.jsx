@@ -1,11 +1,21 @@
 import { faSnowflake } from '@fortawesome/free-regular-svg-icons'
-import { faAirFreshener, faBellConcierge, faCarAlt, faCheck, faMugSaucer, faPeopleGroup, faSuitcase, faTicket, faTrainSubway, faUtensils, faWheelchairMove, faWifi } from '@fortawesome/free-solid-svg-icons'
+import { faBellConcierge, faCarAlt, faCheck, faChevronDown, faChevronUp, faMugSaucer, faPeopleGroup, faSuitcase, faTicket, faTrainSubway, faUtensils, faWheelchairMove, faWifi } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
+import { useState } from 'react'
 import './aboutPage.css'
 
 const AboutPage = () => {
+    const [openIcon1, setOpenIcon1] = useState(false);
+    const [openIcon2, setOpenIcon2] = useState(false);
+    const [openIcon3, setOpenIcon3] = useState(false);
+    const [openIcon4, setOpenIcon4] = useState(false);
+    const [openIcon5, setOpenIcon5] = useState(false);
+    const [openIcon6, setOpenIcon6] = useState(false);
+    const [openIcon7, setOpenIcon7] = useState(false);
+    const [openIcon8, setOpenIcon8] = useState(false);
+
     return (
         <div className='aboutPage'>
             <Navbar />
@@ -317,7 +327,7 @@ const AboutPage = () => {
                             <h3>Additional amenities</h3>
                         </div>
                         <div className="dDetails">
-                            <li>Airport <b>shuttle service</b> is offered for an additional charge of <i>BDT 1,600</i> per vehicle</li>
+                            <li>Airport <u>shuttle service</u> is offered for an additional charge of <i>BDT 1,600</i> per vehicle</li>
                         </div>
                     </div>
                     <div className="pItem">
@@ -350,6 +360,137 @@ const AboutPage = () => {
                                 <li>Britannia Hotel Hotel Sylhet</li>
                             </ul>
                         </div>
+                    </div>
+                    <div className="pItem">
+                        <div className="dTitle">
+                            <h3>Accepted Payment methods</h3>
+                        </div>
+                        <div className="dDetails">
+                            <div className="dIcon">
+                                <div className="bank">
+                                    <img src={require("../../images/amex.png")} alt="" />
+                                    <h6>American<br />Express</h6>
+                                </div>
+                                <div className="bank">
+                                    <img src={require("../../images/master.png")} alt="" />
+                                    <h6>MasterCard</h6>
+                                </div>
+                                <div className="bank">
+                                    <img src={require("../../images/visa.png")} alt="" />
+                                    <h6>Visa Card</h6>
+                                </div>
+                                <div className="bank">
+                                    <img src={require("../../images/bKash.jpg")} alt="" />
+                                    <h6>bKash</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="question">
+                <div className="questionLeft">
+                    <div className="heading"></div>
+                    <div className="hTitle">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                </div>
+                <div className="questionRight">
+                    <div className="questionTitle">
+                        <div className="questionText" id='1' onClick={() => setOpenIcon1(!openIcon1)}>
+                            {!openIcon1 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon1 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>Does Britannia Hotel offer free cancellation for a full refund?</ul>
+                        </div>
+                        {openIcon1 && <div className="answerText">
+                            <p>
+                                Yes, Britannia Hotel has fully refundable rooms available to book on our site. If you book a refundable room rate, this can be canceled up to a few days before check-in depending on the property's policy. Be sure to check this property's cancellation policy for exact terms and conditions.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='2' onClick={() => setOpenIcon2(!openIcon2)}>
+                            {!openIcon2 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon2 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>Are pets allowed at Britannia Hotel?</ul>
+                        </div>
+                        {openIcon2 && <div className="answerText">
+                            <p>
+                                Sorry, pets are not allowed.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='3' onClick={() => setOpenIcon3(!openIcon3)}>
+                            {!openIcon3 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon3 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>Is on-site parking offered at Britannia Hotel?</ul>
+                        </div>
+                        {openIcon3 && <div className="answerText">
+                            <p>
+                                Yes, there is free self parking.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='4' onClick={() => setOpenIcon4(!openIcon4)}>
+                            {!openIcon4 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon4 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>Is airport shuttle service offered by Britannia Hotel?</ul>
+                        </div>
+                        {openIcon4 && <div className="answerText">
+                            <p>
+                                Yes, a shuttle from the airport to the hotel is available. The charge is BDT 1,600 per vehicle.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='5' onClick={() => setOpenIcon5(!openIcon5)}>
+                            {!openIcon5 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon5 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>What are the check-in and check-out times at Britannia Hotel?</ul>
+                        </div>
+                        {openIcon5 && <div className="answerText">
+                            <p>
+                                You can check in from 12:00 noon - 14:00. Check out time is 11:00.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='6' onClick={() => setOpenIcon6(!openIcon6)}>
+                            {!openIcon6 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon6 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>What activities are available at Britannia Hotel and nearby areas?</ul>
+                        </div>
+                        {openIcon6 && <div className="answerText">
+                            <p>
+                                Enjoy nearby winter activities like skiing. Britannia Hotel also has a picnic area.
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='7' onClick={() => setOpenIcon7(!openIcon7)}>
+                            {!openIcon7 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon7 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>Is there a restaurant at Britannia Hotel or nearby?</ul>
+                        </div>
+                        {openIcon7 && <div className="answerText">
+                            <p>
+                                Yes, there are 3 on-site restaurants, featuring international cuisine. Nearby restaurants include Blue Mango (5-minute walk), Spicy Restaurant (12-minute walk) and Woondal Restaurant (12-minute walk).
+                            </p>
+                        </div>}
+                    </div>
+                    <div className="questionTitle">
+                        <div className="questionText" id='8' onClick={() => setOpenIcon8(!openIcon8)}>
+                            {!openIcon8 && <FontAwesomeIcon icon={faChevronDown} />}
+                            {openIcon8 && <FontAwesomeIcon icon={faChevronUp} />}
+                            <ul>What is the atmosphere around Britannia Hotel?</ul>
+                        </div>
+                        {openIcon8 && <div className="answerText">
+                            <p>
+                                Britannia Hotel is located by the river, a 6-minute walk from Hazrat Shah Jalal's Tomb and a 16-minute walk from Shahi Eidgah.
+                            </p>
+                        </div>}
                     </div>
                 </div>
             </div>

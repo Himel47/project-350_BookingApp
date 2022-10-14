@@ -36,6 +36,7 @@ b {
 .highlightTitle {
     display: flex;
     padding: 10px;
+    align-items: center;
 }
 
 .facilities {
@@ -118,6 +119,11 @@ ul {
     flex-direction: column;
 }
 
+u {
+    font-size: 14px;
+    font-weight: 600;
+}
+
 .pItem {
     display: flex;
     flex-direction: column;
@@ -131,4 +137,40 @@ ul {
 .pItem .dDetails {
     font-size: 13px;
     margin-bottom: 8px;
+}
+
+.dIcon {
+    display: flex;
+    padding: 10px;
+}
+
+.bank {
+    text-align: center;
+    margin-left: 18px;
+}
+
+.question {
+    margin-top: 50px;
+    display: flex;
+    max-width: 1024px;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.questionText {
+    display: flex;
+    cursor: pointer;
+}
+
+.questionText:hover {
+    color: cornflowerblue;
+}
+
+.answerText {
+    margin-left: 35px;
+    width: 450px;
+    font-size: 13px;
+    padding: 10px 0 10px 20px;
+    color: #003172;
+    font-weight: 600;
 }
