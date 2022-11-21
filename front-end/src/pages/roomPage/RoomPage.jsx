@@ -1,5 +1,5 @@
 import React from 'react'
-import Popup from 'reactjs-popup'
+import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import './roomPage.css'
 
@@ -8,41 +8,6 @@ const RoomPage = () => {
         <div className="roomPage">
             <Navbar />
             <div className="roomContainers">
-                <div className="roomWrappers">
-                    <h1 className="roomTitles">Search</h1>
-                    <div className="roomItems">
-                        <label>Check-in-Date</label>
-                        <input type="date" placeholder='Check-in-Date' />
-                    </div>
-                    <div className="roomItems">
-                        <label>Check-out-Date</label>
-                        <input type="date" placeholder='Check-in-Date' />
-                    </div>
-                    <div className="roomItems">
-                        <label>Options</label>
-                        <div className="roomOptions">
-                            <div className="roItem">
-                                <span className="roomOptionText">
-                                    Adult
-                                </span>
-                                <input type="number" min={1} className="roomOptionInput" placeholder='1' />
-                            </div>
-                            <div className="roItem">
-                                <span className="roomOptionText">
-                                    Children
-                                </span>
-                                <input type="number" min={0} className="roomOptionInput" placeholder='0' />
-                            </div>
-                            <div className="roItem">
-                                <span className="roomOptionText">
-                                    Room
-                                </span>
-                                <input type="number" min={1} className="roomOptionInput" placeholder='1' />
-                            </div>
-                        </div>
-                    </div>
-                    <button>Check Availability</button>
-                </div>
                 <div className="roomLists">
                     <div className="roomInfo">
                         <div className="infoTitle">
@@ -57,7 +22,7 @@ const RoomPage = () => {
                             </p>
                         </div>
                         <div className="roomDescription">
-                            <div className="listDesc">
+                            <div className="listDesc listTop">
                                 <div className="roomType">
                                     <h5>Room type</h5>
                                 </div>
@@ -83,7 +48,7 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-3.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -98,7 +63,7 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-3.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -113,7 +78,7 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-2.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -128,7 +93,7 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-2.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -146,7 +111,7 @@ const RoomPage = () => {
                                     </div>
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -164,7 +129,7 @@ const RoomPage = () => {
                                     </div>
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -182,7 +147,7 @@ const RoomPage = () => {
                                     </div>
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -197,7 +162,7 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-3.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                             <div className="listDesc listHover">
@@ -212,13 +177,14 @@ const RoomPage = () => {
                                     <img src={require("../../images/person-3.png")} alt="" className="guestIcon" />
                                 </div>
                                 <div className="priceButton">
-                                    <button>Show prices</button>
+                                    <button>View Details</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

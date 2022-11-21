@@ -1,0 +1,82 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loggerContainer {
+    position: relative;
+}
+
+.backImg {
+    z-index: -1;
+    opacity: 80%;
+}
+
+.logWrapper {
+    position: absolute;
+    margin: 30px;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    height: 350px;
+    padding: 80px 100px 130px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.loggerItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.loggerItem>label {
+    font-weight: bold;
+}
+
+.loggerItem>input {
+    border: .5px solid dimgray;
+    margin-top: 5px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: azure;
+    font-size: 14px;
+    cursor: text;
+}
+
+.loggerBtn {
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #0071c2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registerLink {
+    font-size: 14px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registerLink>b {
+    color: #003172;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.loggerText>h5 {
+    font-weight: 700;
+}
+
+.loggerText>h5>b {
+    color: #003172;
+    margin-right: 10px;
+}

@@ -1,13 +1,54 @@
 .header {
     /* margin-top: 50px; */
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     position: relative;
     margin-top: 50px;
 }
 
-.image img {
-    position: absolute;
+.loginContainer {
+    background-color: coral;
+    width: 1280px;
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+.loginContainer.loginMode {
+    height: 180px;
+}
+
+.loginWrapper {
+    padding: 40px;
+}
+
+.loginItems {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+
+.loginText>b {
+    color: #003172;
+    margin: 0 7px;
+}
+
+.loginBtn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: #0071c2;
+    color: aliceblue;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.image {
     z-index: -1;
     width: 100%;
     max-width: 1024px;
@@ -15,12 +56,13 @@
 }
 
 .headContainer {
+    position: absolute;
     width: 100%;
     max-width: 1024px;
     max-height: 683px;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0px 100px 0px;
+    margin: 180px 0px 100px 0px;
 }
 
 
@@ -58,7 +100,7 @@
     border-color: white;
 }
 
-.imageItem img {
+.imageItem>img {
     width: 140px;
     height: 94px;
     margin: 10px;
@@ -67,7 +109,9 @@
 }
 
 .headerSearch {
-    height: 50px;
+    height: 70px;
+    width: 90%;
+    max-width: 1024px;
     background-color: #003172;
     border: 2px solid white;
     display: flex;
@@ -76,19 +120,19 @@
     padding: 15px 10px;
     border-radius: 8px;
     position: absolute;
-    bottom: -40px;
+    bottom: -50px;
     gap: 10px;
 }
 
 .headerContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    max-width: 1024px;
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
     padding: 5px;
 }
 
 .box {
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -97,25 +141,55 @@
 
 .box>label {
     font-size: 16px;
+    color: white;
 }
 
-.box>input {
-    border: none;
-    background-color: cornflowerblue;
-    padding: 10px 15px;
+.headerSearchItem {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    padding: 8px 15px;
     border-radius: 5px;
 }
 
-::placeholder {
-    color: black;
+.headerSearchIcon {
+    color: dimgrey;
+}
+
+.headerSearchText,
+.optionCounterNumber {
+    color: dimgray;
+    font-weight: 600;
+}
+
+.date {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    z-index: 2;
+}
+
+.optionCounter {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.optionCounterNumber {
+    padding: 0 45px;
 }
 
 .headerSearch>button {
-    height: 70px;
+    height: 65px;
     border: none;
     background-color: cornflowerblue;
     padding: 20px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 }
